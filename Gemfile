@@ -12,9 +12,14 @@ gem 'autoprefixer-rails'
 gem 'modernizr-rails'
 gem 'font-awesome-rails'
 gem 'devise'
+gem 'rails_admin'
+gem 'cancan'
+gem 'paper_trail', '~> 3.0.5'
 
 # Use sqlite3 as the database for Active Record
 group :development, :test do
+  gem 'better_errors'
+  gem 'binding_of_caller'
   gem 'sqlite3'
   gem 'rspec-rails'
   gem 'guard-rspec'
