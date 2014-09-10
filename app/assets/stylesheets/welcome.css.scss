@@ -5,6 +5,70 @@
 @import "bootstrap";
 @import "font-awesome";
 
+@mixin sr-only() {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+.form {
+  @extend .col-md-6;
+}
+
+.submit {
+  @extend .btn;
+  @extend .btn-primary;
+  @extend .btn-lg;
+}
+
+.authform {
+  padding-top: 30px;
+  max-width: 320px;
+  margin: 0 auto;
+
+  form {
+    @extend .well;
+    @extend .well-lg;
+    padding-bottom: 40px;
+  }
+
+  .right {
+    float: right !important;
+  }
+
+  .button {
+    @extend .btn;
+    @extend .btn-primary;
+  }
+}
+
+.editform {
+  padding-top: 30px;
+  max-width: 400px;
+  margin: 0 auto;
+
+  form[class="form"] {
+    @extend .well;
+    @extend .well-lg;
+    padding-bottom: 40px;
+  }
+
+  .button-update {
+    @extend .btn;
+    @extend .btn-primary;
+  }
+    
+  .button-cancel {
+    @extend .btn;
+    @extend .btn-danger;
+  }
+}
+
 header[role="banner"] {
   border-bottom-width: 1px;
   border-bottom-style: solid;
@@ -20,6 +84,11 @@ header[role="banner"] {
     .main-nav {
       a {
         color: $gray-light;
+        @media (max-width: ($grid-float-breakpoint - 1)) {
+          span {
+            @include sr-only();
+          }
+        }
       }
       float: right;
     }

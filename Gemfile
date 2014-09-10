@@ -11,6 +11,7 @@ gem 'bootstrap-will_paginate'
 gem 'autoprefixer-rails'
 gem 'modernizr-rails'
 gem 'font-awesome-rails'
+gem 'devise'
 
 # Use sqlite3 as the database for Active Record
 group :development, :test do
