@@ -175,6 +175,7 @@ GEM
     rdoc (4.1.1)
       json (~> 1.4)
     remotipart (1.2.1)
+    rolify (3.4.1)
     rspec (3.0.0)
       rspec-core (~> 3.0.0)
       rspec-expectations (~> 3.0.0)
@@ -268,6 +269,7 @@ DEPENDENCIES
   paper_trail (~> 3.0.5)
   rails (= 4.1.4)
   rails_admin
+  rolify
   rspec-rails
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)

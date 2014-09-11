@@ -15,6 +15,7 @@ gem 'devise'
 gem 'rails_admin'
 gem 'cancan'
 gem 'paper_trail', '~> 3.0.5'
+gem 'rolify'
 
 # Use sqlite3 as the database for Active Record
 group :development, :test do
