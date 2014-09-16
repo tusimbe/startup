@@ -1,0 +1,9 @@
+<div class="store-item col-xs-6 col-md-4">
+  <%= image_tag(store.images.first.photo.url(:store), alt: store.name) %>
+  <h2><%= store.name %></h2>
+  <p>地址:<%= store.address %></p>  
+  <p>营业时间:<%= store.service_time %></p>
+  <%= link_to(store, class: "btn btn-default btn-xs pull-right") do %>
+    看看菜单 <i class="fa fa-arrow-circle-right"></i>
+  <% end %>
+</div>

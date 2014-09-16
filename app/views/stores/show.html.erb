@@ -1,0 +1,21 @@
+<main role="main">
+<div class="container store-information">
+  <div class="page-header">
+    <h2>商品</h2>
+  </div>
+</div>
+
+<div class="container store-products">
+  <div class="row">
+    <div class="products-grid col-sm-9">
+      <table class="table">
+        <%= render @products %>
+      </table>
+    </div>
+
+    <div class="cart-main col-sm-3">
+      <%= render 'carts/carts', cart: @cart %>
+    </div>
+  </div>
+</div>
+</main>

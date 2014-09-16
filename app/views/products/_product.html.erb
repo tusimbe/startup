@@ -1,0 +1,10 @@
+<tr>
+  <td><%= product.title %></td>
+  <td><%= product.description %></td>
+  <td><%= product.price %></td>
+  <td>
+    <%= link_to(line_items_path(product: product), class: "btn btn-xs btn-success", remote: true, method: :post) do %>
+      放入购物车 <i class="fa fa-arrow-circle-right"></i>
+    <% end %>
+  </td>
+</tr>

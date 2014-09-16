@@ -16,6 +16,7 @@ gem 'rails_admin'
 gem 'cancan'
 gem 'paper_trail', '~> 3.0.5'
 gem 'rolify'
+gem 'paperclip', '~> 4.2'
 
 # Use sqlite3 as the database for Active Record
 group :development, :test do
@@ -43,6 +44,7 @@ gem 'coffee-rails', '~> 4.0.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+gem 'jquery-turbolinks'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -64,4 +66,4 @@ gem 'spring',        group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-
+gem 'byebug', group: [:development, :test]

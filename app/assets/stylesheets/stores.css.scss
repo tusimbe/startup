@@ -1,0 +1,48 @@
+// Place all the styles related to the Stores controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome";
+
+.search-form {
+  @extend .col-md-6;
+}
+
+div.stores {
+  //border-top: 1px solid #eeeeee;
+  margin-top: 25px;
+  padding-top: 25px;
+}
+
+div.search-input {
+  display: inline-block;
+  width: 70%;
+}
+
+input#suggestId {
+  width: 100%;
+}
+
+.store-item {
+  height: 360px;
+  overflow: hidden;
+  padding-bottom: 32px;
+
+
+  h2 {
+    font-size: $font-size-large;
+    line-height: 1.2;
+    padding: 0 !important;
+    margin-top: 6px;
+    margin-bottom: 1em;
+  }
+
+  p {
+    font-size: $font-size-small;
+    line-height: 1.3;
+    color: $gray;
+  }
+
+}
+

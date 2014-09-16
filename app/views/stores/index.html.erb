@@ -1,0 +1,22 @@
+<main role="main">
+<div class="container">
+
+  <div class="page-header header">
+    <h2>寻找餐厅</h2>
+  </div>
+
+  <%= render 'shared/search', url: stores_path %>
+</div>
+
+<div class="container stores">
+  <div class="row">
+    <div class="stores-grid col-sm-9">
+      <%= render @stores %>
+    </div>
+
+    <div class="cart-main col-sm-3">
+      <%= render 'carts/carts', cart: @cart %>
+    </div>
+  </div>
+</div>
+</main>
