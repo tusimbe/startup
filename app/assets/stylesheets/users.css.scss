@@ -1,3 +1,71 @@
-// Place all the styles related to the Users controller here.
+// the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome";
+@import "mixin";
+
+@mixin sr-only() {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+.form {
+  //@extend .col-md-6;
+}
+
+.submit {
+  @extend .btn;
+  @extend .btn-primary;
+  @extend .btn-lg;
+}
+
+.authform {
+  padding-top: 30px;
+  max-width: 320px;
+  margin: 0 auto;
+
+  form {
+    @extend .well;
+    @extend .well-lg;
+    padding-bottom: 40px;
+  }
+
+  .right {
+    float: right !important;
+  }
+
+  .button {
+    @extend .btn;
+    @extend .btn-primary;
+  }
+}
+
+.editform {
+  padding-top: 30px;
+  max-width: 400px;
+  margin: 0 auto;
+
+  form[class="form"] {
+    @extend .well;
+    @extend .well-lg;
+    padding-bottom: 40px;
+  }
+
+  .button-update {
+    @extend .btn;
+    @extend .btn-primary;
+  }
+
+  .button-cancel {
+    @extend .btn;
+    @extend .btn-danger;
+  }
+}

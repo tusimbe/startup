@@ -1,0 +1,33 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome";
+@import "mixin";
+
+// main header style
+header[role="banner"] {
+  position: relative;
+  z-index: 2;
+  border-bottom: none;
+  padding: 20px 0;
+
+  h1 {
+    margin: 0;
+    padding: 0;
+  }
+
+  .main-nav {
+    list-style: none;
+    display: inline;
+    padding-top: 6px;
+
+    a {
+      @extend .btn;
+      @include login-attractive();
+      @include btn-outline-inverse();
+    }
+  }
+}
+
+header#set-background-color {
+  background-color: rgb(2,204,204);
+}

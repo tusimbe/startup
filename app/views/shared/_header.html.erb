@@ -1,34 +1,41 @@
+<% unless isWelcome? %>
+<header role="banner" id="set-background-color">
+<% else %>
 <header role="banner">
-<div class="container">
-  <a class="banner-brand" href="<%= root_path %>">
-    <img src="<%= image_path("logo.png") %>" alt="Bootstrappin'" width="120">
-  </a>
+<% end %>
+  <div class="container">
+    <h1 class="pull-left">
+      <a href="<%= root_path %>">
+        <img src="<%= image_path("bunkr-logo-white.png") %>" alt="Bunkr">
+      </a>
+    </h1>
 
-  <ul class="main-nav nav nav-pills" role="tablist">
-    <% if user_signed_in? %>
-    <li role="presentation">
-      <%= link_to edit_user_registration_path do %>
-        <i class="fa fa-pencil fa-lg"></i><span> 账户信息</span>
-      <% end %>
-    </li>
+    <nav class="main-nav pull-right" role="tablist">
+      <% if user_signed_in? %>
+        <div class="btn-group">
+          <%= link_to edit_user_registration_path do %>
+            <i class="fa fa-pencil fa-lg"></i><span> 账户信息</span>
+          <% end %>
+        </div>
 
-    <li role="presentation">
-      <%= link_to destroy_user_session_path, method: 'delete' do %>
-        <i class="fa fa-external-link fa-lg"></i><span> 退出</span>
+        <div class="btn-group">
+          <%= link_to destroy_user_session_path, method: 'delete' do %>
+            <i class="fa fa-external-link fa-lg"></i><span> 退出</span>
+          <% end %>
+        </div>
       <% end %>
-    </li>
-    <% end %>
- 
-    <li role="presentation">
-      <%= link_to new_user_session_path do %>
-        <i class="fa fa-user fa-lg"></i><span> 登录</span>
-      <% end %>
-    </li>
-    <li role="presentation">
-      <%= link_to new_user_registration_path do %>
-        <i class="fa fa-users fa-lg"></i><span> 注册</span>
-      <% end %>
-    </li>
-  </ul>
-</div>
+
+      <div class="btn-group">
+        <%= link_to new_user_session_path do %>
+          <i class="fa fa-user fa-lg"></i> 登录
+        <% end %>
+      </div>
+
+      <div class="btn-group">
+        <%= link_to new_user_registration_path do %>
+          <i class="fa fa-users fa-lg"></i> 注册
+        <% end %>
+      </div>
+    </nav>
+  </div>
 </header>

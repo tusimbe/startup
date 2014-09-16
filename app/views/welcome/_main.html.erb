@@ -1,12 +1,12 @@
-<div class="container">
-  <div id="welcome" class="jumbotron">
-    <div class="container">
-      <h1><strong>xxx.com</strong></h1>
-      <p>把您喜欢的食物送到家!</p>
+<section class="hero-unit">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1 col-sm-12 col-sm-offset-0 searchForm">
+        <h1 class="fontlato">简单迅速的网络外卖</h1>
+        <h2 class="fontlato">把您喜爱的食物送到家</h2>
+        <%= render 'shared/search' %>
+      </div>
     </div>
   </div>
-
-  <%= render 'shared/search', url: stores_path %>
-</div>
-
+</section>
 

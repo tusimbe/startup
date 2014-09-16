@@ -4,6 +4,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
+@import "mixin";
 
 .search-form {
   @extend .col-md-6;
@@ -45,4 +46,3 @@ input#suggestId {
   }
 
 }
-

@@ -16,9 +16,9 @@ application_init = ->
       ac = new BMap.Autocomplete({"input": "suggestId", "location": city})
       ac.addEventListener("onconfirm", (e) ->
         _value = e.item.value
-        myValue = _value.province + _value.city + _value + district + _value.street + _value.business
-        $("#suggestId").attr("address", myValue)
-        $("#suggestId").val myValue
+        address = _value.province + _value.city + _value.district + _value.street + _value.business
+        $("#suggestId").attr("address", address)
+        $("#suggestId").val address
 
         set_lnglat(city, address))
     init_input_suggest("昆明")

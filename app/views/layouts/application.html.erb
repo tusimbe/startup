@@ -27,9 +27,17 @@
 
         <div id="suggestId"></div>
         <% if Rails.env.development? %>
+          <% if isWelcome? %>
+          <div class="debug-welcome">
+            <div class="container">
+              <%= debug(params) %>
+            </div>
+          </div>
+          <% else %>
           <div class="container debug">
             <%= debug(params) %>
           </div>
+          <% end %>
         <% end %>
 
         <%= javascript_include_tag :modernizr, 'data-turbolinks-track' => true %>
