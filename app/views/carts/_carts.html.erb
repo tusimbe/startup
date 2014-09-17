@@ -2,7 +2,7 @@
   <div class="cart-panel panel panel-success">
     <div class="panel-heading">
       <i class="fa fa-shopping-cart"></i> 购物车
-      <span class="pull-right">0 items</span>
+      <span class="pull-right"><%= pluralize(@cart.total_items, "item") %></span>
     </div>
 
     <table class="table">
