@@ -1,4 +1,31 @@
 // Place all the styles related to the Carts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+div#cart {
+  .cart-items {
+    height: 300px;
+  }
 
+  .table {
+    tr.title {
+      background-color: #eee;
+      text-shadow: 0 1px 0 #fff;
+      font-weight: bold;
+    }
+  }
+
+  .panel {
+    margin: 5px 5px;
+    border-top: 4px double #eee;
+
+    div.checkout {
+
+      padding-top: 10px;
+      span {
+      
+        font-weight: bold;
+      }
+
+    }
+  }
+}

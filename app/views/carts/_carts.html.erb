@@ -5,17 +5,54 @@
       <span class="pull-right"><%= pluralize(@cart.total_items, "item") %></span>
     </div>
 
-    <table class="table">
-      <tr>
-        <td>菜 品</td>
-        <td>数 量</td>
-        <td>单 价</td>
-      </tr>
+    <div class="cart-items">
+      <table class="table">
+        <tr class="title">
+          <td>菜 品</td>
+          <td>数 量</td>
+          <td>单 价</td>
+          <td></td>
+        </tr>
 
-      <%= render cart.line_items %>
-    </table>
+        <%= render cart.line_items %>
+      </table>
+    </div>
 
-    <div class="panel-body">
+    <div class="panel">
+      <div class="checkout">
+        <span>结 算</span>
+        <%= link_to("(选择收货地址)", "#", class: "pull-right") %>
+      </div>
+      <div class="delivery address">
+        <p>收货地址</p>
+
+      </div>
+      <div class="checkout-totals clearfix">
+        <p>确认订单总额</p>
+        <table class="table">
+          <tr>
+            <td>运费</td>
+            <td>15元</td>
+          </tr>
+          <tr>
+            <td>账单</td>
+            <td><%= @cart.total_price %></td>
+          </tr>
+        </table>
+      </div>
+      <div class="order-button">
+        <div class="row">
+          <div class="col-sm-6">
+            <%= link_to("#", class: "btn btn-primary") do %>
+              生成订单
+            <% end %>
+          </div>
+          <div class="col-sm-6">
+            <%= link_to("#", class: "btn btn-danger") do %>
+              清空购物车
+            <% end %>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-</div>
