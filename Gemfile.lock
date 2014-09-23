@@ -145,6 +145,7 @@ GEM
       activesupport (>= 3.0.0)
       cocaine (~> 0.5.3)
       mime-types
+    pg (0.17.1)
     polyglot (0.3.5)
     pry (0.10.1)
       coderay (~> 1.1.0)
@@ -287,6 +288,7 @@ DEPENDENCIES
   modernizr-rails
   paper_trail (~> 3.0.5)
   paperclip (~> 4.2)
+  pg
   rails (= 4.1.4)
   rails_admin
   rolify
